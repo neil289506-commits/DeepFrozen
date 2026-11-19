@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "deepfrozen:packed_ice_brick_stairs",
+    "deepfrozen:snow_brick_stairs",
+    "deepfrozen:calcite_stairs",
+    "deepfrozen:polished_calcite_stairs",
+    "deepfrozen:polished_calcite_brick_stairs"
+  ]
+}

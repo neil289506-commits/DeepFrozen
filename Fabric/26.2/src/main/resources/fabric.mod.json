@@ -1,31 +1,31 @@
 {
 	"schemaVersion": 1,
-	"id": "icewinter",
+	"id": "deepfrozen",
 	"version": "${version}",
-	"name": "IceWinter",
+	"name": "DeepFrozen",
 	"description": "Backports Minecraft 26.4 content (Ice Caves, Packed Ice Bricks, Snow Bricks, Calcite, Frostbite and more) to 26.2.",
 	"authors": [
 		"neil289506-commits"
 	],
 	"contact": {
-		"homepage": "https://github.com/neil289506-commits/Minecraft---Docompile",
-		"sources": "https://github.com/neil289506-commits/Minecraft---Docompile"
+		"homepage": "https://github.com/neil289506-commits/IceWinter",
+		"sources": "https://github.com/neil289506-commits/IceWinter"
 	},
 	"license": "CC0-1.0",
-	"icon": "assets/icewinter/icon.png",
+	"icon": "assets/deepfrozen/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"backport.org.TwoSixFourBackPort"
+			"backport.org.DeepFrozen"
 		],
 		"client": [
-			"backport.org.client.TwoSixFourBackPortClient"
+			"backport.org.client.DeepFrozenClient"
 		]
 	},
 	"mixins": [
-		"icewinter.mixins.json",
+		"deepfrozen.mixins.json",
 		{
-			"config": "icewinter.client.mixins.json",
+			"config": "deepfrozen.client.mixins.json",
 			"environment": "client"
 		}
 	],

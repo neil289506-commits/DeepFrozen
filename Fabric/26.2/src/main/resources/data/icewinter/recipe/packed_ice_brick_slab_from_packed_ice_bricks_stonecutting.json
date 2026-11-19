@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "ingredient": "icewinter:packed_ice_bricks",
-  "result": {
-    "id": "icewinter:packed_ice_brick_slab",
-    "count": 2
-  }
-}

@@ -15,7 +15,7 @@ public final class ModPotions {
 	public static final Holder<Potion> LONG_FREEZING = register("long_freezing", 9600);
 
 	private static Holder<Potion> register(String id, int duration) {
-		ResourceKey<Potion> key = ResourceKey.create(Registries.POTION, TwoSixFourBackPort.id(id));
+		ResourceKey<Potion> key = ResourceKey.create(Registries.POTION, DeepFrozen.id(id));
 		return Registry.registerForHolder(BuiltInRegistries.POTION, key,
 			new Potion("freezing", new MobEffectInstance(ModEffects.FREEZING, duration)));
 	}

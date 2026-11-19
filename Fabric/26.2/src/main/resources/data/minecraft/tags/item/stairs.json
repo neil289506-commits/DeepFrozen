@@ -1,10 +1,10 @@
 {
   "replace": false,
   "values": [
-    "icewinter:packed_ice_brick_stairs",
-    "icewinter:snow_brick_stairs",
-    "icewinter:calcite_stairs",
-    "icewinter:polished_calcite_stairs",
-    "icewinter:polished_calcite_brick_stairs"
+    "deepfrozen:packed_ice_brick_stairs",
+    "deepfrozen:snow_brick_stairs",
+    "deepfrozen:calcite_stairs",
+    "deepfrozen:polished_calcite_stairs",
+    "deepfrozen:polished_calcite_brick_stairs"
   ]
 }

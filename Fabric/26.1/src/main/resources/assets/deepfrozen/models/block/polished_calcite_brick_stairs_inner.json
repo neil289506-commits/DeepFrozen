@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "deepfrozen:block/polished_calcite_bricks",
+    "side": "deepfrozen:block/polished_calcite_bricks",
+    "top": "deepfrozen:block/polished_calcite_bricks"
+  }
+}

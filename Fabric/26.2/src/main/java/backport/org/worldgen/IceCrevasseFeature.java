@@ -1,6 +1,6 @@
 package backport.org.worldgen;
 
-import backport.org.TwoSixFourBackPort;
+import backport.org.DeepFrozen;
 import backport.org.block.BrittleIceBlock;
 import backport.org.ModBlocks;
 import com.mojang.serialization.Codec;
@@ -27,7 +27,7 @@ import net.minecraft.world.level.levelgen.feature.FeaturePlaceContext;
 import net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration;
 
 public final class IceCrevasseFeature extends Feature<NoneFeatureConfiguration> {
-   private static final TagKey<Block> CARVABLE = TagKey.create(Registries.BLOCK, TwoSixFourBackPort.id("ice_crevasse_replaceables"));
+   private static final TagKey<Block> CARVABLE = TagKey.create(Registries.BLOCK, DeepFrozen.id("ice_crevasse_replaceables"));
 
    public IceCrevasseFeature(Codec<NoneFeatureConfiguration> codec) {
       super(codec);

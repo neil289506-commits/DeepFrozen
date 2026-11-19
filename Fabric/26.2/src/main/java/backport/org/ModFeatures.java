@@ -12,9 +12,9 @@ public final class ModFeatures {
 	private ModFeatures() {}
 
 	public static final Feature<NoneFeatureConfiguration> ICE_CAVE = Registry.register(
-		BuiltInRegistries.FEATURE, TwoSixFourBackPort.id("ice_cave"), new IceCaveFeature(NoneFeatureConfiguration.CODEC));
+		BuiltInRegistries.FEATURE, DeepFrozen.id("ice_cave"), new IceCaveFeature(NoneFeatureConfiguration.CODEC));
 	public static final Feature<NoneFeatureConfiguration> ICE_CREVASSE = Registry.register(
-		BuiltInRegistries.FEATURE, TwoSixFourBackPort.id("crevasse"), new IceCrevasseFeature(NoneFeatureConfiguration.CODEC));
+		BuiltInRegistries.FEATURE, DeepFrozen.id("crevasse"), new IceCrevasseFeature(NoneFeatureConfiguration.CODEC));
 
 	public static void init() {}
 }

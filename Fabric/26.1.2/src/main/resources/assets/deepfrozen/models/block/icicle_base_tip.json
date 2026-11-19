@@ -1,0 +1,8 @@
+{
+  "parent": "deepfrozen:block/template_icicle_base",
+  "textures": {
+    "cross": "deepfrozen:block/icicle_tip",
+    "side": "deepfrozen:block/icicle_side",
+    "top": "deepfrozen:block/icicle_top"
+  }
+}

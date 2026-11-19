@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "icewinter:item/chiseled_soulshale"
-  }
-}

@@ -146,7 +146,7 @@ public final class ModBlocks {
 			.isRedstoneConductor((state, level, pos) -> false));
 
 	private static Block register(String name, Function<BlockBehaviour.Properties, Block> factory, BlockBehaviour.Properties properties) {
-		Identifier id = TwoSixFourBackPort.id(name);
+		Identifier id = DeepFrozen.id(name);
 		ResourceKey<Block> blockKey = ResourceKey.create(Registries.BLOCK, id);
 		ResourceKey<Item> itemKey = ResourceKey.create(Registries.ITEM, id);
 

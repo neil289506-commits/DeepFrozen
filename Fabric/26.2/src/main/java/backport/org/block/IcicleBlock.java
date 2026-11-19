@@ -1,6 +1,6 @@
 package backport.org.block;
 
-import backport.org.TwoSixFourBackPort;
+import backport.org.DeepFrozen;
 import com.mojang.serialization.MapCodec;
 
 import net.minecraft.core.BlockPos;
@@ -30,7 +30,7 @@ import org.jspecify.annotations.Nullable;
 public class IcicleBlock extends SpeleothemBlock {
 	public static final MapCodec<IcicleBlock> CODEC = simpleCodec(p -> new IcicleBlock(Blocks.PACKED_ICE.defaultBlockState(), p));
 	public static final TagKey<Block> MELTS_ICICLE_ABOVE =
-		TagKey.create(Registries.BLOCK, TwoSixFourBackPort.id("melts_icicle_above"));
+		TagKey.create(Registries.BLOCK, DeepFrozen.id("melts_icicle_above"));
 	public static final BooleanProperty ATTACHED = BlockStateProperties.ATTACHED;
 
 	public IcicleBlock(BlockState blockToGrowOn, BlockBehaviour.Properties properties) {

@@ -15,7 +15,7 @@ public final class ModEffects {
 
 	public static final Holder<MobEffect> FREEZING = Registry.registerForHolder(
 		BuiltInRegistries.MOB_EFFECT,
-		ResourceKey.create(Registries.MOB_EFFECT, TwoSixFourBackPort.id("freezing")),
+		ResourceKey.create(Registries.MOB_EFFECT, DeepFrozen.id("freezing")),
 		new FreezingMobEffect(MobEffectCategory.HARMFUL, 10875635));
 
 	public static void init() {}

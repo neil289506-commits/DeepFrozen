@@ -1,6 +1,0 @@
-{
-  "parent": "icewinter:block/template_icicle",
-  "textures": {
-    "cross": "icewinter:block/icicle_frustum"
-  }
-}

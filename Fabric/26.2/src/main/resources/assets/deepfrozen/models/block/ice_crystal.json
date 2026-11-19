@@ -1,0 +1,6 @@
+{
+  "parent": "deepfrozen:block/cross",
+  "textures": {
+    "cross": "deepfrozen:block/ice_crystal"
+  }
+}

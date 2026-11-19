@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/outer_stairs",
-  "textures": {
-    "bottom": "icewinter:block/polished_calcite",
-    "side": "icewinter:block/polished_calcite",
-    "top": "icewinter:block/polished_calcite"
-  }
-}

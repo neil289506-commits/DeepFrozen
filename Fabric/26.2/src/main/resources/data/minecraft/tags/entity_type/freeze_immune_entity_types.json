@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-    "icewinter:frostbite",
+    "deepfrozen:frostbite",
     "minecraft:zombie",
     "minecraft:husk",
     "minecraft:drowned"

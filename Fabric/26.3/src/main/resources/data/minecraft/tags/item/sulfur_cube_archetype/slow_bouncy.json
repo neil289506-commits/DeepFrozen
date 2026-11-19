@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "deepfrozen:calcite_pillar",
+    "deepfrozen:polished_calcite",
+    "deepfrozen:polished_calcite_bricks",
+    "minecraft:calcite",
+    "deepfrozen:chiseled_soulshale"
+  ]
+}

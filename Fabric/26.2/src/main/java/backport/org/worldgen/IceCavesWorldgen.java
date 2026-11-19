@@ -2,7 +2,7 @@ package backport.org.worldgen;
 
 import java.util.function.Consumer;
 
-import backport.org.TwoSixFourBackPort;
+import backport.org.DeepFrozen;
 import com.mojang.datafixers.util.Pair;
 
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
@@ -19,12 +19,12 @@ import net.minecraft.world.level.levelgen.GenerationStep.Decoration;
 import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 
 public final class IceCavesWorldgen {
-	public static final ResourceKey<Biome> ICE_CAVES = ResourceKey.create(Registries.BIOME, TwoSixFourBackPort.id("ice_caves"));
+	public static final ResourceKey<Biome> ICE_CAVES = ResourceKey.create(Registries.BIOME, DeepFrozen.id("ice_caves"));
 
 	private IceCavesWorldgen() {}
 
 	private static ResourceKey<PlacedFeature> placed(String name) {
-		return ResourceKey.create(Registries.PLACED_FEATURE, TwoSixFourBackPort.id(name));
+		return ResourceKey.create(Registries.PLACED_FEATURE, DeepFrozen.id(name));
 	}
 
 	/** Adds the ice cave feature to every overworld biome, and the extra decoration to the Ice Caves biome. */

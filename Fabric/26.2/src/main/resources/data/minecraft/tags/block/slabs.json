@@ -1,10 +1,10 @@
 {
   "replace": false,
   "values": [
-    "icewinter:packed_ice_brick_slab",
-    "icewinter:snow_brick_slab",
-    "icewinter:calcite_slab",
-    "icewinter:polished_calcite_slab",
-    "icewinter:polished_calcite_brick_slab"
+    "deepfrozen:packed_ice_brick_slab",
+    "deepfrozen:snow_brick_slab",
+    "deepfrozen:calcite_slab",
+    "deepfrozen:polished_calcite_slab",
+    "deepfrozen:polished_calcite_brick_slab"
   ]
 }

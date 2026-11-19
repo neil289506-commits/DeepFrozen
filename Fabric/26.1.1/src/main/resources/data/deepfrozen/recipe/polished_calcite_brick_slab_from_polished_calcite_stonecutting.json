@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "deepfrozen:polished_calcite",
+  "result": {
+    "id": "deepfrozen:polished_calcite_brick_slab",
+    "count": 2
+  }
+}

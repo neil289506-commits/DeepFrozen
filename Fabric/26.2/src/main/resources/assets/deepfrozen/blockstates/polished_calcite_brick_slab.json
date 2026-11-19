@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "deepfrozen:block/polished_calcite_brick_slab"
+    },
+    "type=double": {
+      "model": "deepfrozen:block/polished_calcite_bricks"
+    },
+    "type=top": {
+      "model": "deepfrozen:block/polished_calcite_brick_slab_top"
+    }
+  }
+}

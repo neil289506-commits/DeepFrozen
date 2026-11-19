@@ -1,9 +1,15 @@
-# IceWinter
+# DeepFrozen - Fabric 26.1.1
 
-## Setup
+Backport of the Minecraft 26.4 Ice Caves drop for Minecraft 26.1.1 (Fabric).
 
-For setup instructions, please see the [Fabric Documentation page](https://docs.fabricmc.net/develop/getting-started/creating-a-project#setting-up) related to the IDE that you are using.
+```
+./gradlew build
+./gradlew runClient
+```
 
-## License
+Needs Java 25.
 
-This template is available under the CC0 license. Feel free to learn from it and incorporate it in your own projects.
+## Notes
+
+- Built from the 26.2 sources with the 26.1 differences: entity type constants on `EntityType`, the icicle built on `PointedDripstoneBlock`, no Frostbite advancement extensions (package names differ), no sulfur cube archetype data.
+- Not compiled against 26.1 yet.

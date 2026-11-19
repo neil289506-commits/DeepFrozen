@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-    "icewinter:icicle",
+    "deepfrozen:icicle",
     "minecraft:pointed_dripstone"
   ]
 }

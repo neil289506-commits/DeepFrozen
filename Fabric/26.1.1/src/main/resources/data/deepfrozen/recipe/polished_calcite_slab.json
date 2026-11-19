@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": "deepfrozen:polished_calcite"
+  },
+  "pattern": [
+    "###"
+  ],
+  "result": {
+    "id": "deepfrozen:polished_calcite_slab",
+    "count": 6
+  }
+}

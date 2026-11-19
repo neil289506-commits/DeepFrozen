@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "deepfrozen:block/calcite_pillar_top",
+    "side": "deepfrozen:block/calcite_pillar_side"
+  }
+}

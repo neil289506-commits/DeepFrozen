@@ -1,9 +1,9 @@
 {
   "replace": false,
   "values": [
-    "icewinter:packed_ice_bricks",
-    "icewinter:chiseled_packed_ice",
-    "icewinter:snow_bricks",
+    "deepfrozen:packed_ice_bricks",
+    "deepfrozen:chiseled_packed_ice",
+    "deepfrozen:snow_bricks",
     "minecraft:snow_block"
   ]
 }

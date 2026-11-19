@@ -1,8 +1,0 @@
-{
-  "replace": false,
-  "values": [
-    "minecraft:ice",
-    "icewinter:brittle_ice",
-    "minecraft:frosted_ice"
-  ]
-}

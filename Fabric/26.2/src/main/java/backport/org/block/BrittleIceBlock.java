@@ -1,7 +1,7 @@
 package backport.org.block;
 
 import backport.org.ModSounds;
-import backport.org.TwoSixFourBackPort;
+import backport.org.DeepFrozen;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -33,7 +33,7 @@ import net.minecraft.world.level.gamerules.GameRules;
 public class BrittleIceBlock extends IceBlock {
 	public static final IntegerProperty AGE = BlockStateProperties.AGE_3;
 	public static final TagKey<EntityType<?>> DOES_NOT_BREAK =
-		TagKey.create(Registries.ENTITY_TYPE, TwoSixFourBackPort.id("does_not_break_brittle_ice"));
+		TagKey.create(Registries.ENTITY_TYPE, DeepFrozen.id("does_not_break_brittle_ice"));
 	private static final int TICK_DELAY = 24;
 
 	public BrittleIceBlock(BlockBehaviour.Properties properties) {

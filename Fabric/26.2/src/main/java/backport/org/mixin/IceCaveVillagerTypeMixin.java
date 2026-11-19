@@ -1,6 +1,6 @@
 package backport.org.mixin;
 
-import backport.org.TwoSixFourBackPort;
+import backport.org.DeepFrozen;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
@@ -15,7 +15,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 abstract class IceCaveVillagerTypeMixin {
    @Inject(method = "byBiome", at = @At("HEAD"), cancellable = true)
    private static void iceCaves$snowyVillager(Holder<Biome> biome, CallbackInfoReturnable<ResourceKey<VillagerType>> cir) {
-      if (biome.is(ResourceKey.create(Registries.BIOME, TwoSixFourBackPort.id("ice_caves")))) {
+      if (biome.is(ResourceKey.create(Registries.BIOME, DeepFrozen.id("ice_caves")))) {
          cir.setReturnValue(VillagerType.SNOW);
       }
    }

@@ -14,7 +14,7 @@ import net.minecraft.world.item.alchemy.Potions;
 @Mixin(PotionBrewing.class)
 abstract class PotionBrewingMixin {
 	@Inject(method = "addVanillaMixes", at = @At("TAIL"))
-	private static void icewinter$addFreezingMixes(PotionBrewing.Builder builder, CallbackInfo ci) {
+	private static void deepfrozen$addFreezingMixes(PotionBrewing.Builder builder, CallbackInfo ci) {
 		builder.addMix(Potions.AWKWARD, ModItems.ICE_BALL, ModPotions.FREEZING);
 		builder.addMix(Potions.WATER, ModItems.ICE_BALL, Potions.MUNDANE);
 		builder.addMix(ModPotions.FREEZING, Items.REDSTONE, ModPotions.LONG_FREEZING);

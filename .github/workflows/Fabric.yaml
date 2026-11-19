@@ -6,15 +6,16 @@ on:
       - Fabric
     paths:
       - "Fabric/**"
-      - ".github/workflows/fabric.yml"
+      - ".github/workflows/Fabric.yaml"
   pull_request:
     paths:
       - "Fabric/**"
-      - ".github/workflows/fabric.yml"
+      - ".github/workflows/Fabric.yaml"
   workflow_dispatch:
 
+# contents: write is only used to publish the build log of a failed build to a branch (ci-logs-<version>)
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   build:
@@ -57,23 +58,38 @@ jobs:
       - name: Build
         run: |
           chmod +x ./gradlew
-          ./gradlew build --no-daemon --stacktrace
+          set -o pipefail
+          ./gradlew build --no-daemon --stacktrace 2>&1 | tee build.log
 
       - name: Upload artifacts
         if: success()
         uses: actions/upload-artifact@v4
         with:
-          name: icewinter-fabric-${{ matrix.version }}
+          name: deepfrozen-fabric-${{ matrix.version }}
           path: |
             Fabric/${{ matrix.version }}/build/libs/*.jar
             !Fabric/${{ matrix.version }}/build/libs/*-sources.jar
           if-no-files-found: error
 
+      - name: Publish build log to branch ci-logs-${{ matrix.version }}
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/push
+          tail -n 400 build.log > /tmp/push/build-tail.log || true
+          grep -n -E "error:|warning: \[|FAILED|What went wrong|Caused by" build.log | head -80 > /tmp/push/errors.log || true
+          cd /tmp/push && git init -q && git checkout -q -b "ci-logs-${{ matrix.version }}"
+          git config user.name github-actions && git config user.email actions@github.com
+          git add . && git commit -q -m "build log ${{ matrix.version }}" || true
+          git push -f "https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}.git" "ci-logs-${{ matrix.version }}"
+
       - name: Upload build diagnostics
         if: failure()
         uses: actions/upload-artifact@v4
         with:
-          name: icewinter-fabric-${{ matrix.version }}-failure
+          name: deepfrozen-fabric-${{ matrix.version }}-failure
           path: |
             Fabric/${{ matrix.version }}/build/reports/
             Fabric/${{ matrix.version }}/build/test-results/

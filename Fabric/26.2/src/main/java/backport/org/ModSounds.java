@@ -79,7 +79,7 @@ public final class ModSounds {
 	}
 
 	private static SoundEvent register(String name) {
-		var id = TwoSixFourBackPort.id(name);
+		var id = DeepFrozen.id(name);
 		return Registry.register(BuiltInRegistries.SOUND_EVENT, id, SoundEvent.createVariableRangeEvent(id));
 	}
 

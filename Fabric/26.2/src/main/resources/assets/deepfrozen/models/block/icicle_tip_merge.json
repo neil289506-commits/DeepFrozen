@@ -1,0 +1,6 @@
+{
+  "parent": "deepfrozen:block/template_icicle",
+  "textures": {
+    "cross": "deepfrozen:block/icicle_tip_merge"
+  }
+}

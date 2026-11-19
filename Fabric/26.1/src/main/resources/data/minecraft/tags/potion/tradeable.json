@@ -1,0 +1,7 @@
+{
+  "replace": false,
+  "values": [
+    "deepfrozen:freezing",
+    "deepfrozen:long_freezing"
+  ]
+}

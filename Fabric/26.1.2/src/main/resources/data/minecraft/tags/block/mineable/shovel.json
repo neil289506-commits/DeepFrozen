@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "deepfrozen:snow_bricks",
+    "deepfrozen:snow_brick_slab",
+    "deepfrozen:snow_brick_stairs",
+    "deepfrozen:snow_brick_wall"
+  ]
+}

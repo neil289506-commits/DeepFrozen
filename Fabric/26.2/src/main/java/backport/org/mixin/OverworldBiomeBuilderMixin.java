@@ -17,7 +17,7 @@ import net.minecraft.world.level.biome.OverworldBiomeBuilder;
 @Mixin(OverworldBiomeBuilder.class)
 abstract class OverworldBiomeBuilderMixin {
 	@Inject(method = "addBiomes", at = @At("TAIL"))
-	private void icewinter$addIceCaves(Consumer<Pair<Climate.ParameterPoint, ResourceKey<Biome>>> biomes, CallbackInfo ci) {
+	private void deepfrozen$addIceCaves(Consumer<Pair<Climate.ParameterPoint, ResourceKey<Biome>>> biomes, CallbackInfo ci) {
 		IceCavesWorldgen.addIceCaveBiome(biomes);
 	}
 }

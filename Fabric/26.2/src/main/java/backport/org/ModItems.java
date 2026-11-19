@@ -26,10 +26,10 @@ public final class ModItems {
 
 	public static final Item MUSIC_DISC_FLURRY = register("music_disc_flurry", Item::new,
 		new Item.Properties().stacksTo(1).rarity(Rarity.UNCOMMON)
-			.jukeboxPlayable(ResourceKey.create(Registries.JUKEBOX_SONG, TwoSixFourBackPort.id("flurry"))));
+			.jukeboxPlayable(ResourceKey.create(Registries.JUKEBOX_SONG, DeepFrozen.id("flurry"))));
 
 	private static Item register(String name, Function<Item.Properties, Item> factory, Item.Properties properties) {
-		ResourceKey<Item> key = ResourceKey.create(Registries.ITEM, TwoSixFourBackPort.id(name));
+		ResourceKey<Item> key = ResourceKey.create(Registries.ITEM, DeepFrozen.id(name));
 		return Registry.register(BuiltInRegistries.ITEM, key, factory.apply(properties.setId(key)));
 	}
 

@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-    "icewinter:freezing",
-    "icewinter:long_freezing"
+    "deepfrozen:freezing",
+    "deepfrozen:long_freezing"
   ]
 }

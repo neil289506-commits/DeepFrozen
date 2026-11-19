@@ -1,0 +1,205 @@
+jar: /home/runner/.gradle/caches/fabric-loom/26.2/minecraft-extracted_server.jar
+=== FULL net.minecraft.world.level.material.PushReaction
+Compiled from "PushReaction.java"
+public final class net.minecraft.world.level.material.PushReaction extends java.lang.Enum<net.minecraft.world.level.material.PushReaction> {
+  public static final net.minecraft.world.level.material.PushReaction NORMAL;
+  public static final net.minecraft.world.level.material.PushReaction DESTROY;
+  public static final net.minecraft.world.level.material.PushReaction BLOCK;
+  public static final net.minecraft.world.level.material.PushReaction IGNORE;
+  public static final net.minecraft.world.level.material.PushReaction PUSH_ONLY;
+  public static net.minecraft.world.level.material.PushReaction[] values();
+  public static net.minecraft.world.level.material.PushReaction valueOf(java.lang.String);
+}
+=== FULL net.minecraft.world.level.block.state.BlockBehaviour$BlockStateBase
+Compiled from "BlockBehaviour.java"
+public abstract class net.minecraft.world.level.block.state.BlockBehaviour$BlockStateBase extends net.minecraft.world.level.block.state.StateHolder<net.minecraft.world.level.block.Block, net.minecraft.world.level.block.state.BlockState> implements net.minecraft.core.TypedInstance<net.minecraft.world.level.block.Block> {
+  protected net.minecraft.world.level.block.state.BlockBehaviour$BlockStateBase(net.minecraft.world.level.block.Block, net.minecraft.world.level.block.state.properties.Property<?>[], java.lang.Comparable<?>[]);
+  public void initCache();
+  public net.minecraft.world.level.block.Block getBlock();
+  public net.minecraft.core.Holder<net.minecraft.world.level.block.Block> typeHolder();
+  public boolean blocksMotion();
+  public boolean isSolid();
+  public boolean isValidSpawn(net.minecraft.world.level.BlockGetter, net.minecraft.core.BlockPos, net.minecraft.world.entity.EntityType<?>);
+  public boolean propagatesSkylightDown();
+  public int getLightDampening();
+  public net.minecraft.world.phys.shapes.VoxelShape getFaceOcclusionShape(net.minecraft.core.Direction);
+  public net.minecraft.world.phys.shapes.VoxelShape getOcclusionShape();
+  public boolean hasLargeCollisionShape();
+  public boolean useShapeForLightOcclusion();
+  public int getLightEmission();
+  public boolean isAir();
+  public boolean ignitedByLava();
+  public boolean liquid();
+  public net.minecraft.world.level.material.MapColor getMapColor(net.minecraft.world.level.BlockGetter, net.minecraft.core.BlockPos);
+  public net.minecraft.world.level.block.state.BlockState rotate(net.minecraft.world.level.block.Rotation);
+  public net.minecraft.world.level.block.state.BlockState mirror(net.minecraft.world.level.block.Mirror);
+  public net.minecraft.world.level.block.RenderShape getRenderShape();
+  public boolean emissiveRendering();
+  public float getShadeBrightness(net.minecraft.world.level.BlockGetter, net.minecraft.core.BlockPos);
+  public boolean isRedstoneConductor(net.minecraft.world.level.BlockGetter, net.minecraft.core.BlockPos);
+  public boolean isSignalSource();
+  public int getOwnSignal(net.minecraft.world.level.BlockGetter, net.minecraft.core.BlockPos);
+  public int getSignal(net.minecraft.world.level.BlockGetter, net.minecraft.core.BlockPos, net.minecraft.core.Direction);
+  public boolean hasAnalogOutputSignal();
+  public int getAnalogOutputSignal(net.minecraft.world.level.Level, net.minecraft.core.BlockPos, net.minecraft.core.Direction);
+  public float getDestroySpeed(net.minecraft.world.level.BlockGetter, net.minecraft.core.BlockPos);
+  public float getDestroyProgress(net.minecraft.world.entity.player.Player, net.minecraft.world.level.BlockGetter, net.minecraft.core.BlockPos);
+  public int getDirectSignal(net.minecraft.world.level.BlockGetter, net.minecraft.core.BlockPos, net.minecraft.core.Direction);
+  public net.minecraft.world.level.material.PushReaction getPistonPushReaction();
+  public boolean isSolidRender();
+  public boolean canOcclude();
+  public boolean skipRendering(net.minecraft.world.level.block.state.BlockState, net.minecraft.core.Direction);
+  public net.minecraft.world.phys.shapes.VoxelShape getShape(net.minecraft.world.level.BlockGetter, net.minecraft.core.BlockPos);
+  public net.minecraft.world.phys.shapes.VoxelShape getShape(net.minecraft.world.level.BlockGetter, net.minecraft.core.BlockPos, net.minecraft.world.phys.shapes.CollisionContext);
+  public net.minecraft.world.phys.shapes.VoxelShape getCollisionShape(net.minecraft.world.level.BlockGetter, net.minecraft.core.BlockPos);
+  public net.minecraft.world.phys.shapes.VoxelShape getCollisionShape(net.minecraft.world.level.BlockGetter, net.minecraft.core.BlockPos, net.minecraft.world.phys.shapes.CollisionContext);
+  public net.minecraft.world.phys.shapes.VoxelShape getEntityInsideCollisionShape(net.minecraft.world.level.BlockGetter, net.minecraft.core.BlockPos, net.minecraft.world.entity.Entity);
+  public net.minecraft.world.phys.shapes.VoxelShape getBlockSupportShape(net.minecraft.world.level.BlockGetter, net.minecraft.core.BlockPos);
+  public net.minecraft.world.phys.shapes.VoxelShape getVisualShape(net.minecraft.world.level.BlockGetter, net.minecraft.core.BlockPos, net.minecraft.world.phys.shapes.CollisionContext);
+  public net.minecraft.world.phys.shapes.VoxelShape getInteractionShape(net.minecraft.world.level.BlockGetter, net.minecraft.core.BlockPos);
+  public final boolean entityCanStandOn(net.minecraft.world.level.BlockGetter, net.minecraft.core.BlockPos, net.minecraft.world.entity.Entity);
+  public final boolean entityCanStandOnFace(net.minecraft.world.level.BlockGetter, net.minecraft.core.BlockPos, net.minecraft.world.entity.Entity, net.minecraft.core.Direction);
+  public net.minecraft.world.phys.Vec3 getOffset(net.minecraft.core.BlockPos);
+  public boolean hasOffsetFunction();
+  public boolean triggerEvent(net.minecraft.world.level.Level, net.minecraft.core.BlockPos, int, int);
+  public void handleNeighborChanged(net.minecraft.world.level.Level, net.minecraft.core.BlockPos, net.minecraft.world.level.block.Block, net.minecraft.world.level.redstone.Orientation, boolean);
+  public final void updateNeighbourShapes(net.minecraft.world.level.LevelAccessor, net.minecraft.core.BlockPos, int);
+  public final void updateNeighbourShapes(net.minecraft.world.level.LevelAccessor, net.minecraft.core.BlockPos, int, int);
+  public final void updateIndirectNeighbourShapes(net.minecraft.world.level.LevelAccessor, net.minecraft.core.BlockPos, int);
+  public void updateIndirectNeighbourShapes(net.minecraft.world.level.LevelAccessor, net.minecraft.core.BlockPos, int, int);
+  public void onPlace(net.minecraft.world.level.Level, net.minecraft.core.BlockPos, net.minecraft.world.level.block.state.BlockState, boolean);
+  public void affectNeighborsAfterRemoval(net.minecraft.server.level.ServerLevel, net.minecraft.core.BlockPos, boolean);
+  public void onExplosionHit(net.minecraft.server.level.ServerLevel, net.minecraft.core.BlockPos, net.minecraft.world.level.Explosion, java.util.function.BiConsumer<net.minecraft.world.item.ItemStack, net.minecraft.core.BlockPos>);
+  public void tick(net.minecraft.server.level.ServerLevel, net.minecraft.core.BlockPos, net.minecraft.util.RandomSource);
+  public void randomTick(net.minecraft.server.level.ServerLevel, net.minecraft.core.BlockPos, net.minecraft.util.RandomSource);
+  public void entityInside(net.minecraft.world.level.Level, net.minecraft.core.BlockPos, net.minecraft.world.entity.Entity, net.minecraft.world.entity.InsideBlockEffectApplier, boolean);
+  public void spawnAfterBreak(net.minecraft.server.level.ServerLevel, net.minecraft.core.BlockPos, net.minecraft.world.item.ItemStack, boolean);
+  public java.util.List<net.minecraft.world.item.ItemStack> getDrops(net.minecraft.world.level.storage.loot.LootParams$Builder);
+  public net.minecraft.world.InteractionResult useItemOn(net.minecraft.world.item.ItemStack, net.minecraft.world.level.Level, net.minecraft.world.entity.player.Player, net.minecraft.world.InteractionHand, net.minecraft.world.phys.BlockHitResult);
+  public net.minecraft.world.InteractionResult useWithoutItem(net.minecraft.world.level.Level, net.minecraft.world.entity.player.Player, net.minecraft.world.phys.BlockHitResult);
+  public void attack(net.minecraft.world.level.Level, net.minecraft.core.BlockPos, net.minecraft.world.entity.player.Player);
+  public boolean isSuffocating(net.minecraft.world.level.BlockGetter, net.minecraft.core.BlockPos);
+  public boolean isViewBlocking(net.minecraft.world.level.BlockGetter, net.minecraft.core.BlockPos);
+  public net.minecraft.world.level.block.state.BlockState updateShape(net.minecraft.world.level.LevelReader, net.minecraft.world.level.ScheduledTickAccess, net.minecraft.core.BlockPos, net.minecraft.core.Direction, net.minecraft.core.BlockPos, net.minecraft.world.level.block.state.BlockState, net.minecraft.util.RandomSource);
+  public boolean isPathfindable(net.minecraft.world.level.pathfinder.PathComputationType);
+  public boolean canBeReplaced(net.minecraft.world.item.context.BlockPlaceContext);
+  public boolean canBeReplaced(net.minecraft.world.level.material.Fluid);
+  public boolean canBeReplaced();
+  public boolean canSurvive(net.minecraft.world.level.LevelReader, net.minecraft.core.BlockPos);
+  public net.minecraft.core.BlockPos getPostProcessPos(net.minecraft.world.level.BlockGetter, net.minecraft.core.BlockPos);
+  public net.minecraft.world.MenuProvider getMenuProvider(net.minecraft.world.level.Level, net.minecraft.core.BlockPos);
+  public boolean is(net.minecraft.tags.TagKey<net.minecraft.world.level.block.Block>, java.util.function.Predicate<net.minecraft.world.level.block.state.BlockBehaviour$BlockStateBase>);
+  public boolean hasBlockEntity();
+  public boolean shouldChangedStateKeepBlockEntity(net.minecraft.world.level.block.state.BlockState);
+  public <T extends net.minecraft.world.level.block.entity.BlockEntity> net.minecraft.world.level.block.entity.BlockEntityTicker<T> getTicker(net.minecraft.world.level.Level, net.minecraft.world.level.block.entity.BlockEntityType<T>);
+  public net.minecraft.world.level.material.FluidState getFluidState();
+  public boolean isRandomlyTicking();
+  public long getSeed(net.minecraft.core.BlockPos);
+  public net.minecraft.world.level.block.SoundType getSoundType();
+  public void onProjectileHit(net.minecraft.world.level.Level, net.minecraft.world.level.block.state.BlockState, net.minecraft.world.phys.BlockHitResult, net.minecraft.world.entity.projectile.Projectile);
+  public boolean isFaceSturdy(net.minecraft.world.level.BlockGetter, net.minecraft.core.BlockPos, net.minecraft.core.Direction);
+  public boolean isFaceSturdy(net.minecraft.world.level.BlockGetter, net.minecraft.core.BlockPos, net.minecraft.core.Direction, net.minecraft.world.level.block.SupportType);
+  public boolean isCollisionShapeFullBlock(net.minecraft.world.level.BlockGetter, net.minecraft.core.BlockPos);
+  public net.minecraft.world.item.ItemStack getCloneItemStack(net.minecraft.world.level.LevelReader, net.minecraft.core.BlockPos, boolean);
+  protected abstract net.minecraft.world.level.block.state.BlockState asState();
+  public boolean requiresCorrectToolForDrops();
+  public boolean shouldSpawnTerrainParticles();
+  public net.minecraft.world.level.block.state.properties.NoteBlockInstrument instrument();
+}
+=== net.minecraft.world.level.material.PushReaction
+public final class net.minecraft.world.level.material.PushReaction extends java.lang.Enum<net.minecraft.world.level.material.PushReaction> {
+  public static final net.minecraft.world.level.material.PushReaction NORMAL;
+  public static final net.minecraft.world.level.material.PushReaction DESTROY;
+  public static final net.minecraft.world.level.material.PushReaction BLOCK;
+  public static final net.minecraft.world.level.material.PushReaction IGNORE;
+  public static final net.minecraft.world.level.material.PushReaction PUSH_ONLY;
+=== net.minecraft.world.entity.LivingEntity
+public abstract class net.minecraft.world.entity.LivingEntity extends net.minecraft.world.entity.Entity implements net.minecraft.world.entity.Attackable,net.minecraft.world.waypoints.WaypointTransmitter {
+  protected static final net.minecraft.network.syncher.EntityDataAccessor<java.lang.Byte> DATA_LIVING_ENTITY_FLAGS;
+  public boolean swinging;
+  public net.minecraft.world.InteractionHand swingingArm;
+  public int swingTime;
+  protected void defineSynchedData(net.minecraft.network.syncher.SynchedEntityData$Builder);
+  public void updateDataBeforeSync();
+  public void swing(net.minecraft.world.InteractionHand);
+  public void swing(net.minecraft.world.InteractionHand, boolean);
+  public net.minecraft.world.phys.shapes.VoxelShape getLiquidCollisionShape();
+  public void onSyncedDataUpdated(net.minecraft.network.syncher.EntityDataAccessor<?>);
+=== net.minecraft.world.entity.Mob
+public abstract class net.minecraft.world.entity.Mob extends net.minecraft.world.entity.LivingEntity implements net.minecraft.world.entity.Targeting,net.minecraft.world.entity.EquipmentUser,net.minecraft.world.entity.Leashable {
+  protected void defineSynchedData(net.minecraft.network.syncher.SynchedEntityData$Builder);
+  public <T extends net.minecraft.world.entity.Mob> T convertTo(net.minecraft.world.entity.EntityType<T>, net.minecraft.world.entity.ConversionParams, net.minecraft.world.entity.EntitySpawnReason, net.minecraft.world.entity.ConversionParams$AfterConversion<T>);
+  public <T extends net.minecraft.world.entity.Mob> T convertTo(net.minecraft.world.entity.EntityType<T>, net.minecraft.world.entity.ConversionParams, net.minecraft.world.entity.ConversionParams$AfterConversion<T>);
+=== net.minecraft.world.entity.Entity
+public abstract class net.minecraft.world.entity.Entity implements net.minecraft.world.Nameable, net.minecraft.world.level.entity.EntityAccess, net.minecraft.world.scores.ScoreHolder, net.minecraft.network.syncher.SyncedDataHolder, net.minecraft.core.component.DataComponentGetter, net.minecraft.world.entity.ItemOwner, net.minecraft.world.entity.SlotProvider, net.minecraft.util.debug.DebugValueSource, net.minecraft.core.TypedInstance<net.minecraft.world.entity.EntityType<?>> {
+  public static final float DELTA_AFFECTED_BY_BLOCKS_BELOW_0_2;
+  public static final double DELTA_AFFECTED_BY_BLOCKS_BELOW_0_5;
+  public static final double DELTA_AFFECTED_BY_BLOCKS_BELOW_1_0;
+  public boolean horizontalCollision;
+  public boolean verticalCollision;
+  public boolean verticalCollisionBelow;
+  public boolean minorHorizontalCollision;
+  public boolean hurtMarked;
+  protected final net.minecraft.network.syncher.SynchedEntityData entityData;
+  protected static final net.minecraft.network.syncher.EntityDataAccessor<java.lang.Byte> DATA_SHARED_FLAGS_ID;
+  protected static final net.minecraft.network.syncher.EntityDataAccessor<net.minecraft.world.entity.Pose> DATA_POSE;
+  public boolean needsSync;
+  public boolean syncPosition;
+  public void syncPacketPositionCodec(double, double, double);
+  public net.minecraft.network.protocol.game.VecDeltaCodec getPositionCodec();
+  protected abstract void defineSynchedData(net.minecraft.network.syncher.SynchedEntityData$Builder);
+  public net.minecraft.network.syncher.SynchedEntityData getEntityData();
+  public void updateDataBeforeSync();
+  protected boolean isHorizontalCollisionMinor(net.minecraft.world.phys.Vec3);
+  public static net.minecraft.world.phys.Vec3 collideBoundingBox(net.minecraft.world.phys.shapes.CollisionContext, net.minecraft.world.phys.Vec3, net.minecraft.world.phys.AABB, net.minecraft.world.level.Level, java.util.List<net.minecraft.world.phys.shapes.VoxelShape>);
+  public boolean isUnderWater();
+  public void onSyncedDataUpdated(java.util.List<net.minecraft.network.syncher.SynchedEntityData$DataValue<?>>);
+  public void onSyncedDataUpdated(net.minecraft.network.syncher.EntityDataAccessor<?>);
+  protected static net.minecraft.world.phys.Vec3 getCollisionHorizontalEscapeVector(double, double, float);
+=== net.minecraft.world.entity.SwingAnimation
+Error: class not found: net.minecraft.world.entity.SwingAnimation
+=== net.minecraft.world.level.block.Block
+public class net.minecraft.world.level.block.Block extends net.minecraft.world.level.block.state.BlockBehaviour implements net.minecraft.world.level.ItemLike {
+  public static final com.mojang.serialization.MapCodec<net.minecraft.world.level.block.Block> CODEC;
+  public static final net.minecraft.core.IdMapper<net.minecraft.world.level.block.state.BlockState> BLOCK_STATE_REGISTRY;
+  public static final int UPDATE_SKIP_BLOCK_ENTITY_SIDEEFFECTS;
+  protected com.mojang.serialization.MapCodec<? extends net.minecraft.world.level.block.Block> codec();
+=== net.minecraft.world.level.block.state.BlockBehaviour
+public abstract class net.minecraft.world.level.block.state.BlockBehaviour implements net.minecraft.world.flag.FeatureElement {
+  protected final boolean hasCollision;
+  protected abstract com.mojang.serialization.MapCodec<? extends net.minecraft.world.level.block.Block> codec();
+  protected static <B extends net.minecraft.world.level.block.Block> com.mojang.serialization.codecs.RecordCodecBuilder<B, net.minecraft.world.level.block.state.BlockBehaviour$Properties> propertiesCodec();
+  public static <B extends net.minecraft.world.level.block.Block> com.mojang.serialization.MapCodec<B> simpleCodec(java.util.function.Function<net.minecraft.world.level.block.state.BlockBehaviour$Properties, B>);
+  protected net.minecraft.world.phys.shapes.VoxelShape getShape(net.minecraft.world.level.block.state.BlockState, net.minecraft.world.level.BlockGetter, net.minecraft.core.BlockPos, net.minecraft.world.phys.shapes.CollisionContext);
+  protected net.minecraft.world.phys.shapes.VoxelShape getCollisionShape(net.minecraft.world.level.block.state.BlockState, net.minecraft.world.level.BlockGetter, net.minecraft.core.BlockPos, net.minecraft.world.phys.shapes.CollisionContext);
+  protected net.minecraft.world.phys.shapes.VoxelShape getEntityInsideCollisionShape(net.minecraft.world.level.block.state.BlockState, net.minecraft.world.level.BlockGetter, net.minecraft.core.BlockPos, net.minecraft.world.entity.Entity);
+  protected boolean isCollisionShapeFullBlock(net.minecraft.world.level.block.state.BlockState, net.minecraft.world.level.BlockGetter, net.minecraft.core.BlockPos);
+  protected net.minecraft.world.phys.shapes.VoxelShape getVisualShape(net.minecraft.world.level.block.state.BlockState, net.minecraft.world.level.BlockGetter, net.minecraft.core.BlockPos, net.minecraft.world.phys.shapes.CollisionContext);
+=== net.minecraft.world.level.block.SpeleothemBlock
+public abstract class net.minecraft.world.level.block.SpeleothemBlock extends net.minecraft.world.level.block.Block implements net.minecraft.world.level.block.SimpleWaterloggedBlock,net.minecraft.world.level.block.Fallable {
+  public abstract com.mojang.serialization.MapCodec<? extends net.minecraft.world.level.block.SpeleothemBlock> codec();
+  protected net.minecraft.world.phys.shapes.VoxelShape getShape(net.minecraft.world.level.block.state.BlockState, net.minecraft.world.level.BlockGetter, net.minecraft.core.BlockPos, net.minecraft.world.phys.shapes.CollisionContext);
+  protected boolean isCollisionShapeFullBlock(net.minecraft.world.level.block.state.BlockState, net.minecraft.world.level.BlockGetter, net.minecraft.core.BlockPos);
+=== net.minecraft.world.level.block.state.BlockState
+public class net.minecraft.world.level.block.state.BlockState extends net.minecraft.world.level.block.state.BlockBehaviour$BlockStateBase {
+  public static final com.mojang.serialization.Codec<net.minecraft.world.level.block.state.BlockState> CODEC;
+=== net.minecraft.world.entity.monster.zombie.Drowned
+public class net.minecraft.world.entity.monster.zombie.Drowned extends net.minecraft.world.entity.monster.zombie.Zombie implements net.minecraft.world.entity.monster.RangedAttackMob {
+  protected boolean convertsInWater();
+=== net.minecraft.world.entity.monster.zombie.Zombie
+public class net.minecraft.world.entity.monster.zombie.Zombie extends net.minecraft.world.entity.monster.Monster {
+  protected void defineSynchedData(net.minecraft.network.syncher.SynchedEntityData$Builder);
+  public boolean isUnderWaterConverting();
+  public void onSyncedDataUpdated(net.minecraft.network.syncher.EntityDataAccessor<?>);
+  protected boolean convertsInWater();
+  protected void doUnderWaterConversion(net.minecraft.server.level.ServerLevel);
+  protected void convertToZombieType(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.EntityType<? extends net.minecraft.world.entity.monster.zombie.Zombie>);
+  public boolean convertVillagerToZombieVillager(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.npc.villager.Villager);
+=== net.minecraft.world.entity.monster.Zombie
+Error: class not found: net.minecraft.world.entity.monster.Zombie
+=== net.minecraft.world.entity.monster.Drowned
+Error: class not found: net.minecraft.world.entity.monster.Drowned
+=== net.minecraft.server.level.ServerPlayer
+public class net.minecraft.server.level.ServerPlayer extends net.minecraft.world.entity.player.Player {
+  public static final double BLOCK_INTERACTION_DISTANCE_VERIFICATION_BUFFER;
+  public void swing(net.minecraft.world.InteractionHand);

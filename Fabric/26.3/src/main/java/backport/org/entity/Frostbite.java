@@ -121,7 +121,7 @@ public final class Frostbite extends Zombie implements RangedAttackMob {
 			iceBall.shoot(dx, dy + arc, dz, 1.6F, 14.0F - this.level().getDifficulty().getId() * 4.0F);
 			server.addFreshEntity(iceBall);
 			this.playSound(SoundEvents.DROWNED_SHOOT, 1.0F, 1.0F / (0.8F + this.random.nextFloat() * 0.4F));
-			this.swing(InteractionHand.MAIN_HAND);
+			this.swingForAttack(InteractionHand.MAIN_HAND);
 		}
 	}
 
@@ -146,9 +146,8 @@ public final class Frostbite extends Zombie implements RangedAttackMob {
 	}
 
 	@Override
-	protected void doUnderWaterConversion(ServerLevel level) {
-		this.playSound(ModSounds.ENTITY_FROSTBITE_CONVERTED_TO_ZOMBIE, 1.0F, 1.0F);
-		this.convertToZombieType(level, EntityTypes.ZOMBIE);
+	protected net.minecraft.world.entity.EntityType<? extends Zombie> convertsToWhenDrowning() {
+		return EntityTypes.ZOMBIE;
 	}
 
 	@Override

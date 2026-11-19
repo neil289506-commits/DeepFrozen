@@ -72,7 +72,7 @@ jobs:
           if-no-files-found: error
 
       - name: Publish build log to branch ci-logs-${{ matrix.version }}
-        if: failure()
+        if: always()
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
@@ -84,6 +84,7 @@ jobs:
           JAR=$(find ~/.gradle -name '*.jar' -path '*loom*' -size +20M 2>/dev/null | grep -iE 'minecraft' | grep -viE 'sources|natives' | head -1 || true)
           echo "jar: $JAR" > /tmp/push/api.log
           if [ -n "$JAR" ]; then
+            for c in net.minecraft.world.level.material.PushReaction 'net.minecraft.world.level.block.state.BlockBehaviour$BlockStateBase'; do echo "=== FULL $c" >> /tmp/push/api.log; javap -protected -cp "$JAR" "$c" >> /tmp/push/api.log 2>&1 || true; done
             for c in net.minecraft.world.level.material.PushReaction net.minecraft.world.entity.LivingEntity net.minecraft.world.entity.Mob net.minecraft.world.entity.Entity net.minecraft.world.entity.SwingAnimation net.minecraft.world.level.block.Block net.minecraft.world.level.block.state.BlockBehaviour net.minecraft.world.level.block.SpeleothemBlock net.minecraft.world.level.block.state.BlockState net.minecraft.world.entity.monster.zombie.Drowned net.minecraft.world.entity.monster.zombie.Zombie net.minecraft.world.entity.monster.Zombie net.minecraft.world.entity.monster.Drowned net.minecraft.server.level.ServerPlayer; do
               echo "=== $c" >> /tmp/push/api.log
               javap -protected -cp "$JAR" "$c" 2>&1 | grep -E "swing|hurtMarked|Marked|sync|Sync|Velocity|velocity|DESTROY|BREAK|PUSH|NORMAL|BLOCK|IGNORE|codec|Codec|blocksMotion|isSolid|Collision|convert|Convert|UnderWater|class |enum |interface " >> /tmp/push/api.log || true

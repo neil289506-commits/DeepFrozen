@@ -52,7 +52,7 @@ public record IceCrevasseFeature() implements Feature {
    }
 
    private static boolean barrier(BlockState state) {
-      return state.blocksMotion() || state.is(BlockTags.ALL_SIGNS);
+      return !state.getCollisionShape(net.minecraft.world.level.EmptyBlockGetter.INSTANCE, BlockPos.ZERO).isEmpty() || state.is(BlockTags.ALL_SIGNS);
    }
 
    private static IceCrevasseFeature.Surface surface(WorldGenLevel level, BlockPos center) {

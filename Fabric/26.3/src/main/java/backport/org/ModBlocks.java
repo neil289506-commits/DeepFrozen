@@ -116,8 +116,7 @@ public final class ModBlocks {
 			.noOcclusion()
 			.instrument(NoteBlockInstrument.CHIME)
 			.isValidSpawn((state, level, pos, type) -> type == EntityTypes.POLAR_BEAR)
-			.isRedstoneConductor((state, level, pos) -> false)
-			.pushReaction(PushReaction.DESTROY));
+			.isRedstoneConductor((state, level, pos) -> false));
 
 	// ---- Ice Crystal and Icicle ----
 	public static final Block ICE_CRYSTAL = register("ice_crystal", IceCrystalBlock::new,
@@ -127,7 +126,6 @@ public final class ModBlocks {
 			.instrument(NoteBlockInstrument.CHIME)
 			.strength(1.5F, 1.5F)
 			.lightLevel(state -> 4)
-			.pushReaction(PushReaction.DESTROY)
 			.isRedstoneConductor((state, level, pos) -> false)
 			.noOcclusion());
 	public static final Block ICICLE = register("icicle",
@@ -142,7 +140,6 @@ public final class ModBlocks {
 			.strength(0.5F, 0.5F)
 			.dynamicShape()
 			.offsetType(BlockBehaviour.OffsetType.XZ)
-			.pushReaction(PushReaction.DESTROY)
 			.isRedstoneConductor((state, level, pos) -> false));
 
 	private static Block register(String name, Function<BlockBehaviour.Properties, Block> factory, BlockBehaviour.Properties properties) {

@@ -17,7 +17,8 @@ abstract class SnowballMixin {
          Vec3 motion = ((Snowball)(Object)this).getDeltaMovement();
          double horizontal = Math.max(0.001, Math.sqrt(motion.x * motion.x + motion.z * motion.z));
          player.push(motion.x / horizontal * 0.45, 0.12, motion.z / horizontal * 0.45);
-         player.hurtMarked = true;
+         player.needsSync = true;
+         player.syncVelocity = true;
       }
    }
 }

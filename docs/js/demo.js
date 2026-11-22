@@ -1,0 +1,4 @@
+const I=[["packed_ice_bricks", "緊緻冰磚", "方塊", "含階梯、半磚、牆、雕刻緊緻冰"], ["snow_bricks", "雪磚", "方塊", "含階梯、半磚、牆"], ["calcite_pillar_side", "方解石柱", "方塊", "方解石系列"], ["polished_calcite_bricks", "拋光方解石磚", "方塊", "含階梯、半磚、牆"], ["chiseled_packed_ice", "雕刻緊緻冰", "方塊", "雕刻紋樣的緊緻冰"], ["brittle_ice_0", "脆冰", "方塊", "容易碎裂的冰"], ["ice_crystal", "冰晶", "方塊／物品", "冰洞中的晶體"], ["icicle_middle", "冰錐", "方塊", "長在緊緻冰下,快融化時掉落"], ["frostbite_spawn_egg", "凍傷殭屍", "生物", "會丟冰球,附生怪蛋"], ["ice_ball", "冰球", "物品", "凍傷殭屍投擲的冰球"], ["freezing", "冰凍效果", "狀態效果", "含藥水、噴濺、滯留、藥水箭"], ["music_disc_flurry", "Flurry 唱片", "物品", "音樂唱片"]];
+function show(i){const [k,n,t,d]=I[i];bi.src='assets/'+k+'.png';bt.textContent=t;bn.textContent=n;bd.textContent=d;
+ document.querySelectorAll('#bl .pick').forEach(x=>x.classList.toggle('on',+x.dataset.i===i))}
+document.querySelectorAll('#bl .pick').forEach(x=>x.onclick=()=>show(+x.dataset.i));show(0);
